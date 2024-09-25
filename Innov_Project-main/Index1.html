@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Form Embedded</title>
+
+  <style>
+    /* Global Styling */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: #0a0a0a;  /* Dark background */
+      color: white;
+      font-family: 'Poppins', Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(135deg, #1a1a1a, #000000);
+      background-size: cover;
+    }
+
+    /* Container for centering the content */
+    .container {
+      width: 80%;
+      max-width: 1200px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(10px);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #00bfff;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Google Form Styling */
+    iframe {
+      width: 100%;
+      max-width: 1200px;
+      height: 600px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 20px;
+      box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.6);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    iframe:hover {
+      transform: scale(1.02);
+      box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.8);
+    }
+
+    /* Button Styling */
+    .step-button {
+      background-color: #00bfff;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 18px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-top: 30px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .step-button:hover {
+      background-color: #1e90ff;
+      transform: translateY(-5px);
+    }
+
+    .step-button:active {
+      background-color: #007a99;
+      transform: translateY(2px);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Fill Out the Form Below</h1>
+
+    <!-- Google Form Embed -->
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfhx7_dlGmwxpsGhvddkHkM15GCcFBXADG25cOY2nJ-NJXpXw/viewform?embedded=true"
+            frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+    <!-- Step Button to move to the next section -->
+    <button class="step-button" id="nextStep">Proceed to Test</button>
+  </div>
+
+  <script>
+    // Handle the next step button
+    document.getElementById('nextStep').addEventListener('click', function() {
+      window.location.href = 'index2.html';
+    });
+  </script>
+</body>
+</html>
