@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assessment Form</title>
+</head>
+<body>
+    <form action="submit.php" method="POST">
+        <input type="text" name="first_name" placeholder="First Name" required>
+        <input type="text" name="last_name" placeholder="Last Name" required>
+        <input type="date" name="date_of_birth" required>
+        <select name="gender" required>
+            <option value="">Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select>
+        <input type="date" name="date_of_assessment" required>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
